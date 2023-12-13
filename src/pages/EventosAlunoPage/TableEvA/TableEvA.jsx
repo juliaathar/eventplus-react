@@ -39,18 +39,13 @@ const Table = ({ dados, fnConnect = null, fnShowModal = null }) => {
               </td>
 
               <td className="tbal-data__data tbal-data__data--big tbal-data__btn-actions">
-                {/* imagem do comentário - abre o modal */}
-                {new Date(e.dataEvento) < Date.now() ? (
-                  <img
-                    className="tbal-data__icon"
-                    // idevento={e.idEvento}
-                    src={comentaryIcon}
-                    alt=""
-                    onClick={() => {
-                      fnShowModal(e.idEvento);
-                    }}
-                  />
-                ) : null}
+                <img
+                  className="tbal-data__icon"
+                  idevento={e.idEvento}
+                  src={comentaryIcon}
+                  alt=""
+                  onClick={fnShowModal}
+                />
                 <ToggleSwitch
                   toggleActive={e.situacao}
                   manipulationFunction={
