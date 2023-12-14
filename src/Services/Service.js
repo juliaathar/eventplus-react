@@ -10,6 +10,8 @@ import axios from 'axios';
  * Rota para o recurso Evento
  */
 export const eventsResource = '/Evento';
+
+export const previousEventResource = '/Evento/ListarAnteriores';
 /**
  * Rota para o recurso Listar Minhas Presenças
  */
